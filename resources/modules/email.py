@@ -11,9 +11,9 @@ from os.path import basename, isfile, join
 class Email():
 
     def __init__(self):
-        self.emailRemetente = os.getenv("emailRemetente")
-        self.emailPassword = os.getenv("emailPassword")
-        self.emailDestinatario = os.getenv("emailDestinatario")
+        self.emailRemetente = os.getenv("EMAILREMETENTE")
+        self.emailPassword = os.getenv("EMAILPASSWORD")
+        self.emailDestinatario = os.getenv("EMAILDESTINATARIO")
         self.dataAtual = (datetime.today().strftime('%d/%m/%Y'))
 
     def send_email_falha(self, worker, mensagem):

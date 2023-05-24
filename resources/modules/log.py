@@ -7,14 +7,14 @@ from pathlib import Path
 
 
 class Log():
-    def __init__(self, robo = None):
+    def __init__(self):
         """
         Inicializa o objeto Log.
         
         Args:
             robo (str): O nome do robô.
         """
-        self.path = os.path.join('C:\\RPA', robo, 'logs\\')
+        self.path = os.getenv("LOG_PATH")
         self.data_atual = datetime.now().strftime("%d-%m-%Y")
         self.filename = self.data_atual +'.log'
         self.gerar_log()
