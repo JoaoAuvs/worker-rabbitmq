@@ -4,7 +4,7 @@ Este é um projeto que escuta uma fila RabbitMQ e executa tarefas automatizadas 
 
 ## Descrição
 
-O projeto consiste em um gerenciador de robôs que executa tarefas automatizadas com base em mensagens recebidas de uma fila RabbitMQ. O Worker recebe as mensagens da fila, formata ela adequadamente, identifica qual robô que será executado, inicia o processo do robô correspondente e realiza o envio dos inputs que será utilizado no robô, usando websocket.
+O projeto consiste em um gerenciador de robôs que executa tarefas automatizadas com base em mensagens recebidas de "n" filas RabbitMQ. O Worker recebe a mensagens das filas, formata ela adequadamente, identifica qual robô que será executado, inicia o processo do robô correspondente e realiza o envio dos inputs que será utilizado no robô, usando websocket.
 
 ## Funcionalidades
 
