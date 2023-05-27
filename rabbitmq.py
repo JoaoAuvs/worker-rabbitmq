@@ -40,11 +40,9 @@ class RabbitMQ:
             logging.info(f"Mensagem recebida: {data}")
             
             print(f"[x] PROCESSANDO A MENSAGEM: ID {data['id']}, robo: {data['Robo']}")
-            # print(f"[x] INICIANDO O PROCESSO: ID {data['id']}, robo: {data['Robo']}")
 
             await self.process_message_func(self.worker, data)
             
-            # print(f"[x] PROCESSO FINALIZADO: ID {data['id']}, robo: {data['Robo']}")
             await message.ack()
         except Exception as e:
             logging.error(f"Erro ao processar a mensagem: %s", e)
